@@ -1,8 +1,4 @@
 .home {
-	margin-top: 30px;
-	background-position: top right;
-	background-repeat: no-repeat;
-	background-size: 57%;
 	&__content {
 		max-width: 655px;
 		display: flex;
@@ -10,7 +6,7 @@
 		align-items: flex-start;
 	}
 	&__watch-video {
-		margin: 50px 160px 50px auto;
+		margin: 65px 115px 35px auto;
 		&::before,
 		&::after {
 			content: "";
@@ -47,6 +43,14 @@
 		transition: transform 0.5s;
 		&:hover {
 			transform: translateY(5px);
+		}
+	}
+	&__video {
+		&-container {
+			position: absolute;
+			z-index: -1;
+			top: 30px;
+			right: 0;
 		}
 	}
 }

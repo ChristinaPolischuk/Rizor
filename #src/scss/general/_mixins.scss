@@ -8,8 +8,22 @@
 	}
 }
 
-@mixin btn($width, $height, $font_size) {
-	width: $width;
-	height: $height;
-	font-size: $font_size;
+@mixin size($a, $b: $a) {
+	width: $a;
+	height: $b;
+}
+
+@mixin placeholder {
+	::-webkit-input-placeholder {
+		@content;
+	}
+	:-moz-placeholder {
+		@content;
+	}
+	::-moz-placeholder {
+		@content;
+	}
+	:-ms-input-placeholder {
+		@content;
+	}
 }

@@ -53,22 +53,29 @@ body {
 	color: $text_color;
 }
 
-section {
-	min-height: 750px;
-}
-
 .container {
 	max-width: 1200px;
 	padding: 0 15px;
 	margin: 0 auto;
 }
 
-.section-title {
-	font-family: RubikMonoOne;
-	font-weight: 400;
-	font-size: 40px;
-	line-height: 1.2;
-	letter-spacing: 0.08em;
+section {
+	position: relative;
+}
+
+.section {
+	&__bg {
+		min-height: 878px;
+		padding: 30px 0;
+		background: url("../img/section_bg.png") top left/contain no-repeat;
+	}
+	&__title {
+		font-family: $title_font;
+		font-weight: 400;
+		font-size: 40px;
+		line-height: 1.2;
+		letter-spacing: 0.08em;
+	}
 }
 
 .watch-video {
@@ -96,5 +103,92 @@ section {
 		width: 71px;
 		height: 64px;
 		transition: transform 0.5s;
+	}
+}
+
+.video {
+	max-width: 1076px;
+	width: 100%;
+	max-height: 750px;
+	&__clip,
+	&__cover {
+		width: 100%;
+	}
+	&__clip {
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		top: 0;
+	}
+}
+
+.product {
+	&__title {
+		position: relative;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			left: -40px;
+			top: 50%;
+			background-color: $info_color;
+		}
+		&::before {
+			width: 17px;
+			height: 1px;
+			transform: translateY(-50%);
+		}
+		&::after {
+			width: 1px;
+			height: 288px;
+		}
+	}
+	&__colors {
+		margin: 55px 0 35px;
+		.slick-dots {
+			display: flex;
+			justify-content: flex-end;
+			li {
+				margin: 0 15px;
+				position: relative;
+				&::before,
+				&::after {
+					content: "";
+					position: absolute;
+					background-color: $info_color;
+				}
+				&::before {
+					width: 1px;
+					height: 0;
+					top: calc(100% + 10px);
+					left: 50%;
+					transform: translateX(-50%);
+					transition: height 0.4s;
+				}
+				&::after {
+					@include size(3px);
+					border-radius: 50%;
+					top: calc(100% + 57px);
+					left: 50%;
+					transform: translateX(-50%);
+					opacity: 0;
+					transition: opacity 0.6s;
+				}
+				&.slick-active {
+					&::before {
+						height: 47px;
+					}
+					&::after {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	&__color {
+		cursor: pointer;
+		@include size(24px);
+		display: block;
+		border-radius: 50%;
 	}
 }

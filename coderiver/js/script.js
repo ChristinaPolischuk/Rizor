@@ -883,4 +883,33 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
   movingBar();
   ;
+
+  var productSlider = function productSlider() {
+    var productColors = ['#e2e837', '#00b6f1', '#e23232', '#f0efef', '#0c0c0c'];
+
+    var setAttr = function setAttr() {
+      $('.js-product__slider .slick-slide').each(function (index, el) {
+        el.setAttribute('data-color', productColors[index]);
+      });
+    };
+
+    $('.js-product__slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true,
+      swipe: false,
+      infinite: false,
+      arrows: false,
+      dots: true,
+      appendDots: '.product__colors',
+      customPaging: function customPaging(slider, i) {
+        setAttr();
+        var color = $(slider.$slides[i]).data('color');
+        return '<span class="product__color" style="background-color:' + color + '"></span>';
+      }
+    });
+  };
+
+  productSlider();
+  ;
 })();

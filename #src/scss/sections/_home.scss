@@ -6,7 +6,7 @@
 		align-items: flex-start;
 	}
 	&__watch-video {
-		margin: 65px 115px 35px auto;
+		margin: 65px 170px 35px auto;
 		&::before,
 		&::after {
 			content: "";
@@ -29,6 +29,7 @@
 	}
 	&__title {
 		font-size: 80px;
+		margin-bottom: 0;
 	}
 	&__descr {
 		margin: 20px 0;

@@ -211,3 +211,75 @@ section {
 		border-radius: 50%;
 	}
 }
+
+.btn {
+	padding: 0 45px;
+	height: 50px;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: $accent_color;
+	background-color: #ffffff;
+	border-radius: 35px;
+	box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+	filter: url("#gooey");
+	position: relative;
+	&:focus {
+		outline: none;
+	}
+	&:hover {
+		.btn__bubble {
+			@for $bubble from 1 through 10 {
+				&:nth-child(#{$bubble}) {
+					animation: move-#{$bubble} #{3 + $bubble * 0.02}s infinite;
+					animation-delay: #{$bubble * 0.2}s;
+				}
+			}
+		}
+	}
+	&__bubbles {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	&__bubble {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		display: block;
+		border-radius: 100%;
+		background-color: #fff;
+		@for $bubble from 1 through 10 {
+			&:nth-child(#{$bubble}) {
+				$size: 25px;
+				left: (random(90) + 10) + px;
+				width: $size;
+				height: $size;
+			}
+		}
+	}
+	&__gooey {
+		position: absolute;
+		top: -4000px;
+		left: -4000px;
+	}
+}
+
+@for $bubble from 1 through 10 {
+	@keyframes move-#{$bubble} {
+		0% {
+			transform: translate(0, 0);
+		}
+		99% {
+			transform: translate(0, -(random(80) + 50) + px);
+		}
+		100% {
+			transform: translate(0, 0);
+			opacity: 0;
+		}
+	}
+}

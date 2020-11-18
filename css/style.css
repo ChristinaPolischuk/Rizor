@@ -764,61 +764,61 @@ section {
 }
 
 .btn__bubble:nth-child(1) {
-  left: 77px;
+  left: 66px;
   width: 25px;
   height: 25px;
 }
 
 .btn__bubble:nth-child(2) {
-  left: 14px;
+  left: 69px;
   width: 25px;
   height: 25px;
 }
 
 .btn__bubble:nth-child(3) {
-  left: 39px;
+  left: 51px;
   width: 25px;
   height: 25px;
 }
 
 .btn__bubble:nth-child(4) {
-  left: 37px;
+  left: 92px;
   width: 25px;
   height: 25px;
 }
 
 .btn__bubble:nth-child(5) {
-  left: 80px;
+  left: 40px;
   width: 25px;
   height: 25px;
 }
 
 .btn__bubble:nth-child(6) {
-  left: 60px;
+  left: 47px;
   width: 25px;
   height: 25px;
 }
 
 .btn__bubble:nth-child(7) {
-  left: 13px;
+  left: 11px;
   width: 25px;
   height: 25px;
 }
 
 .btn__bubble:nth-child(8) {
-  left: 64px;
+  left: 58px;
   width: 25px;
   height: 25px;
 }
 
 .btn__bubble:nth-child(9) {
-  left: 63px;
+  left: 58px;
   width: 25px;
   height: 25px;
 }
 
 .btn__bubble:nth-child(10) {
-  left: 73px;
+  left: 17px;
   width: 25px;
   height: 25px;
 }
@@ -836,8 +836,8 @@ section {
   }
 
   99% {
-    -webkit-transform: translate(0, -78px);
-            transform: translate(0, -78px);
+    -webkit-transform: translate(0, -81px);
+            transform: translate(0, -81px);
   }
 
   100% {
@@ -854,8 +854,8 @@ section {
   }
 
   99% {
-    -webkit-transform: translate(0, -78px);
-            transform: translate(0, -78px);
+    -webkit-transform: translate(0, -81px);
+            transform: translate(0, -81px);
   }
 
   100% {
@@ -872,8 +872,8 @@ section {
   }
 
   99% {
-    -webkit-transform: translate(0, -102px);
-            transform: translate(0, -102px);
+    -webkit-transform: translate(0, -52px);
+            transform: translate(0, -52px);
   }
 
   100% {
@@ -890,8 +890,8 @@ section {
   }
 
   99% {
-    -webkit-transform: translate(0, -102px);
-            transform: translate(0, -102px);
+    -webkit-transform: translate(0, -52px);
+            transform: translate(0, -52px);
   }
 
   100% {
@@ -908,8 +908,8 @@ section {
   }
 
   99% {
-    -webkit-transform: translate(0, -79px);
-            transform: translate(0, -79px);
+    -webkit-transform: translate(0, -95px);
+            transform: translate(0, -95px);
   }
 
   100% {
@@ -926,8 +926,8 @@ section {
   }
 
   99% {
-    -webkit-transform: translate(0, -79px);
-            transform: translate(0, -79px);
+    -webkit-transform: translate(0, -95px);
+            transform: translate(0, -95px);
   }
 
   100% {
@@ -944,8 +944,8 @@ section {
   }
 
   99% {
-    -webkit-transform: translate(0, -85px);
-            transform: translate(0, -85px);
+    -webkit-transform: translate(0, -107px);
+            transform: translate(0, -107px);
   }
 
   100% {
@@ -962,8 +962,8 @@ section {
   }
 
   99% {
-    -webkit-transform: translate(0, -85px);
-            transform: translate(0, -85px);
+    -webkit-transform: translate(0, -107px);
+            transform: translate(0, -107px);
   }
 
   100% {
@@ -980,8 +980,8 @@ section {
   }
 
   99% {
-    -webkit-transform: translate(0, -90px);
-            transform: translate(0, -90px);
+    -webkit-transform: translate(0, -121px);
+            transform: translate(0, -121px);
   }
 
   100% {
@@ -998,8 +998,8 @@ section {
   }
 
   99% {
-    -webkit-transform: translate(0, -90px);
-            transform: translate(0, -90px);
+    -webkit-transform: translate(0, -121px);
+            transform: translate(0, -121px);
   }
 
   100% {
@@ -1016,8 +1016,8 @@ section {
   }
 
   99% {
-    -webkit-transform: translate(0, -90px);
-            transform: translate(0, -90px);
+    -webkit-transform: translate(0, -130px);
+            transform: translate(0, -130px);
   }
 
   100% {
@@ -1034,8 +1034,8 @@ section {
   }
 
   99% {
-    -webkit-transform: translate(0, -90px);
-            transform: translate(0, -90px);
+    -webkit-transform: translate(0, -130px);
+            transform: translate(0, -130px);
   }
 
   100% {
@@ -1052,8 +1052,8 @@ section {
   }
 
   99% {
-    -webkit-transform: translate(0, -61px);
-            transform: translate(0, -61px);
+    -webkit-transform: translate(0, -57px);
+            transform: translate(0, -57px);
   }
 
   100% {
@@ -1070,8 +1070,8 @@ section {
   }
 
   99% {
-    -webkit-transform: translate(0, -61px);
-            transform: translate(0, -61px);
+    -webkit-transform: translate(0, -57px);
+            transform: translate(0, -57px);
   }
 
   100% {
@@ -1088,8 +1088,8 @@ section {
   }
 
   99% {
-    -webkit-transform: translate(0, -76px);
-            transform: translate(0, -76px);
+    -webkit-transform: translate(0, -94px);
+            transform: translate(0, -94px);
   }
 
   100% {
@@ -1106,8 +1106,8 @@ section {
   }
 
   99% {
-    -webkit-transform: translate(0, -76px);
-            transform: translate(0, -76px);
+    -webkit-transform: translate(0, -94px);
+            transform: translate(0, -94px);
   }
 
   100% {
@@ -1124,8 +1124,8 @@ section {
   }
 
   99% {
-    -webkit-transform: translate(0, -102px);
-            transform: translate(0, -102px);
+    -webkit-transform: translate(0, -92px);
+            transform: translate(0, -92px);
   }
 
   100% {
@@ -1142,8 +1142,8 @@ section {
   }
 
   99% {
-    -webkit-transform: translate(0, -102px);
-            transform: translate(0, -102px);
+    -webkit-transform: translate(0, -92px);
+            transform: translate(0, -92px);
   }
 
   100% {
@@ -1160,8 +1160,8 @@ section {
   }
 
   99% {
-    -webkit-transform: translate(0, -70px);
-            transform: translate(0, -70px);
+    -webkit-transform: translate(0, -116px);
+            transform: translate(0, -116px);
   }
 
   100% {
@@ -1178,8 +1178,8 @@ section {
   }
 
   99% {
-    -webkit-transform: translate(0, -70px);
-            transform: translate(0, -70px);
+    -webkit-transform: translate(0, -116px);
+            transform: translate(0, -116px);
   }
 
   100% {
@@ -1333,7 +1333,7 @@ html.fp-enabled {
           justify-content: center;
   position: fixed;
   z-index: 100;
-  top: 20%;
+  top: 50%;
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);

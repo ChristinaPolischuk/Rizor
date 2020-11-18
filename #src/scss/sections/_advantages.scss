@@ -1,6 +1,8 @@
 .advantages {
 	padding: 100px 0;
-	display: flex;
+	&__inner {
+		display: flex;
+	}
 	&-video {
 		width: 35%;
 		position: relative;
@@ -49,7 +51,7 @@
 	&-content {
 		margin-left: 100px;
 		&__title {
-			margin: 100px 0 80px;
+			margin: 50px 0 40px;
 			font-size: 20px;
 			font-weight: 700;
 			text-transform: uppercase;

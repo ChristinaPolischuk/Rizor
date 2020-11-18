@@ -65,8 +65,6 @@ section {
 
 .section {
 	&__bg {
-		min-height: 878px;
-		padding: 30px 0;
 		background: url("../img/section_bg.png") top left/contain no-repeat;
 	}
 	&__title {
@@ -131,7 +129,6 @@ section {
 	&__clip,
 	&__cover {
 		width: 100%;
-		min-height: 750px;
 	}
 	&__clip {
 		position: absolute;

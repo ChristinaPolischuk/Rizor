@@ -1,7 +1,5 @@
 .modes {
-	padding: 65px 0;
 	&__content {
-		padding-top: 30px;
 		max-width: 485px;
 		&-header {
 			max-width: 370px;
@@ -24,12 +22,12 @@
 		}
 		&::after {
 			width: 1px;
-			height: 520px;
+			height: 420px;
 			left: calc(100% + 191px);
 		}
 	}
 	&-indicator {
-		margin: 85px 0;
+		margin: 35px 0;
 		display: flex;
 		& > * {
 			margin-right: 70px;

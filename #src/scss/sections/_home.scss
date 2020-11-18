@@ -3,24 +3,64 @@
 		position: relative;
 	}
 	&__content {
-		max-width: 655px;
+		max-width: 56%;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		@media screen and(max-width: 1440px) {
+			max-width: 46%;
+		}
+		@media screen and(max-width: 1200px) {
+			max-width: 52%;
+		}
+		@media screen and(max-width: 1024px) {
+			padding: 20px 0;
+			max-width: 40%;
+			justify-content: center;
+		}
+		@media screen and(max-width: 680px) {
+			max-width: 100%;
+		}
 	}
 	&__watch-video {
 		margin: 35px 170px 35px auto;
+		@media screen and(max-width: 1440px) {
+			margin: 15px 25px 15px auto;
+		}
+		@media screen and(max-width: 1200px) {
+			margin: 15px 0 15px auto;
+		}
+		@media screen and(max-width: 1024px) {
+			order: 3;
+			margin: 0 0 0 auto;
+		}
 		&::before,
 		&::after {
 			content: "";
 			position: absolute;
 			background-color: $info_color;
+			@media screen and(max-width: 1024px) {
+				display: none;
+			}
+			@media screen and(max-width: 680px) {
+				display: block;
+			}
 		}
 		&::before {
 			top: 5px;
 			right: 120%;
 			width: 72px;
 			height: 1px;
+			@media screen and(max-width: 680px) {
+				width: 2px;
+				height: 160px;
+				right: 20%;
+				top: auto;
+				bottom: calc(100% + 10px);
+			}
+			@media screen and(max-width: 360px) {
+				height: 145px;
+			}
 		}
 		&::after {
 			width: 2px;
@@ -28,12 +68,32 @@
 			right: calc(120% + 72px);
 			top: -11px;
 			transition: height 0.5s;
+			@media screen and(max-width: 680px) {
+				width: 120px;
+				height: 2px;
+				right: 20%;
+				top: auto;
+				bottom: calc(100% + 170px);
+			}
+			@media screen and(max-width: 360px) {
+				bottom: calc(100% + 155px);
+			}
 		}
 	}
 	&__title {
 		font-size: 80px;
 		line-height: 1;
 		margin-bottom: 0;
+		@media screen and(max-width: 1440px) {
+			font-size: 45px;
+			max-width: 400px;
+		}
+		@media screen and(max-width: 1024px) {
+			font-size: 35px;
+		}
+		@media screen and(max-width: 360px) {
+			font-size: 30px;
+		}
 	}
 	&__descr {
 		margin: 20px 0;
@@ -42,10 +102,20 @@
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 0.08em;
+		@media screen and(max-width: 1200px) {
+			margin: 10px 0;
+			font-size: 18px;
+		}
+		@media screen and(max-width: 1024px) {
+			font-size: 16px;
+		}
 	}
 	&__scroll {
 		margin-left: 35px;
 		transition: transform 0.5s;
+		@media screen and(max-width: 1024px) {
+			display: none;
+		}
 		&:hover {
 			transform: translateY(5px);
 		}
@@ -56,6 +126,10 @@
 			z-index: -1;
 			top: 0;
 			right: 0;
+			@media screen and(max-width: 680px) {
+				position: relative;
+				z-index: 1;
+			}
 		}
 	}
 }

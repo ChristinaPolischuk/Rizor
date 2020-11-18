@@ -2,10 +2,17 @@
 	padding: 100px 0;
 	&__inner {
 		display: flex;
+		@media screen and(max-width: 1024px) {
+			flex-wrap: wrap;
+		}
 	}
 	&-video {
 		width: 35%;
 		position: relative;
+		@media screen and(max-width: 1024px) {
+			width: 100%;
+			order: 3;
+		}
 		&__clip,
 		&__img {
 			width: 100%;
@@ -15,6 +22,13 @@
 			z-index: -1;
 			top: 0;
 			left: 0;
+		}
+		&__img {
+			@media screen and(max-width: 1024px) {
+				width: 100vw;
+				height: 350px;
+				object-fit: cover;
+			}
 		}
 		&__cover {
 			position: relative;
@@ -50,6 +64,16 @@
 	}
 	&-content {
 		margin-left: 100px;
+		@media screen and(max-width: 1440px) {
+			margin-left: 40px;
+		}
+		@media screen and(max-width: 680px) {
+			margin-left: 0;
+			padding: 0 15px;
+		}
+		@media screen and(max-width: 1024px) {
+			margin-bottom: 40px;
+		}
 		&__title {
 			margin: 50px 0 40px;
 			font-size: 20px;
@@ -57,15 +81,32 @@
 			text-transform: uppercase;
 			letter-spacing: 0.08em;
 			color: $accent_color;
+			@media screen and(max-width: 1440px) {
+				margin: 30px 0;
+			}
 		}
 		&__wrap {
 			display: flex;
+			@media screen and(max-width: 680px) {
+				flex-wrap: wrap;
+			}
 		}
 		&__block {
 			max-width: 270px;
+			@media screen and(max-width: 680px) {
+				width: 100%;
+				order: 2;
+			}
 			&.advantages-content__block--product {
 				max-width: 374px;
 				margin-top: 280px;
+				@media screen and(max-width: 1024px) {
+					margin: 0 0 0 40px;
+				}
+				@media screen and(max-width: 680px) {
+					margin: 0 0 40px;
+					order: 1;
+				}
 			}
 		}
 		&__header {
@@ -87,5 +128,12 @@
 		text-align: right;
 		transform: rotate(-90deg);
 		writing-mode: bt-rl;
+		@media screen and(max-width: 1024px) {
+			font-size: 80px;
+			line-height: 80px;
+			max-width: 611px;
+			top: 270px;
+			right: -220px;
+		}
 	}
 }

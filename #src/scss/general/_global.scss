@@ -64,6 +64,7 @@ section {
 }
 
 .section {
+	overflow: hidden;
 	&__bg {
 		background: url("../img/section_bg.png") top left/contain no-repeat;
 	}

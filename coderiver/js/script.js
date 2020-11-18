@@ -2602,7 +2602,40 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     $('#fullpage').fullpage({
       autoScrolling: true,
       navigation: true,
-      scrollBar: true
+      scrollBar: true,
+      onLeave: function onLeave(origin, destination, direction) {
+        var section = destination.item;
+        var title = section.querySelector('.section__content');
+        var video = document.querySelectorAll('.section__video');
+        var tl = new TimelineMax({
+          delay: .5
+        });
+        tl.fromTo(title, .5, {
+          y: '100',
+          opacity: 0
+        }, {
+          y: 0,
+          opacity: 1
+        });
+
+        if (destination.index === 1) {
+          tl.fromTo(video, .7, {
+            x: '-100%',
+            opacity: 0
+          }, {
+            x: '0%',
+            opacity: 1
+          });
+        } else {
+          tl.fromTo(video, .7, {
+            x: '100%',
+            opacity: 0
+          }, {
+            x: '0%',
+            opacity: 1
+          });
+        }
+      }
     });
   };
 

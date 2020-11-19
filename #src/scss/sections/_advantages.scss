@@ -1,5 +1,8 @@
 .advantages {
 	padding: 100px 0;
+	@media screen and(max-width: 1024px) {
+		padding: 30px 0;
+	}
 	&__inner {
 		display: flex;
 		@media screen and(max-width: 1024px) {
@@ -67,12 +70,12 @@
 		@media screen and(max-width: 1440px) {
 			margin-left: 40px;
 		}
+		@media screen and(max-width: 1024px) {
+			margin-bottom: 40px;
+		}
 		@media screen and(max-width: 680px) {
 			margin-left: 0;
 			padding: 0 15px;
-		}
-		@media screen and(max-width: 1024px) {
-			margin-bottom: 40px;
 		}
 		&__title {
 			margin: 50px 0 40px;
@@ -94,7 +97,7 @@
 		&__block {
 			max-width: 270px;
 			@media screen and(max-width: 680px) {
-				width: 100%;
+				max-width: 100%;
 				order: 2;
 			}
 			&.advantages-content__block--product {
@@ -106,6 +109,9 @@
 				@media screen and(max-width: 680px) {
 					margin: 0 0 40px;
 					order: 1;
+				}
+				@media screen and(max-width: 400px) {
+					max-width: 290px;
 				}
 			}
 		}

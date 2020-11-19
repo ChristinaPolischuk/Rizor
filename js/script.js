@@ -1,5 +1,17 @@
 "use strict";
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 /*
@@ -2596,53 +2608,107 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   };
 
   productSlider();
-  ; // let fullPage = function () {
-  // 	$('#fullpage').fullpage({
-  // 		autoScrolling: true,
-  // 		navigation: true,
-  // 		scrollBar: true,
-  // 		// responsiveWidth: 0,
-  // 		// responsiveHeight: 0,
-  // 		onLeave: (origin, destination, direction) => {
-  // 			let section = destination.item;
-  // 			let title = section.querySelector('.section__content');
-  // 			let video = document.querySelectorAll('.section__video');
-  // 			let tl = new TimelineMax({ delay: .5 });
-  // 			if (destination.index === 1) {
-  // 				tl.fromTo(video, .7,
-  // 					{
-  // 						x: '-100%',
-  // 						opacity: 0
-  // 					},
-  // 					{
-  // 						x: '0%',
-  // 						opacity: 1
-  // 					}
-  // 				);
-  // 			} else {
-  // 				tl.fromTo(video, .7,
-  // 					{
-  // 						x: '100%',
-  // 						opacity: 0
-  // 					},
-  // 					{
-  // 						x: '0%',
-  // 						opacity: 1
-  // 					}
-  // 				);
-  // 			}
-  // 			tl.fromTo(title, .5,
-  // 				{
-  // 					y: '100',
-  // 					opacity: 0
-  // 				},
-  // 				{
-  // 					y: 0,
-  // 					opacity: 1
-  // 				}
-  // 			);
-  // 		}
-  // 	});
-  // }
-  // fullPage();;
+  ;
+
+  var textAnimation = function textAnimation() {
+    var text = document.querySelector('.js-animate-text');
+    var box = document.querySelector('.home__content');
+    text.innerHTML = _toConsumableArray(text.textContent).map(function (n) {
+      return "<div>".concat(n.trim() ? n : '&nbsp;', "</div>");
+    }).join('');
+
+    function rand(x) {
+      return "".concat(Math.random() * x - x * 0.5, "px");
+    }
+
+    function animateText() {
+      _toConsumableArray(text.querySelectorAll('div')).map(function (n) {
+        return n.style;
+      }).forEach(function (n, i) {
+        setTimeout(function () {
+          return Object.assign(n, !n.opacity || +n.opacity === 1 ? {
+            opacity: 0,
+            transform: "translate3d(".concat(rand(400), ", ").concat(rand(400), ", ").concat(rand(30), ")")
+          } : {
+            opacity: .3,
+            transform: "translate3d(".concat(rand(400), ", ").concat(rand(400), ", ").concat(rand(30), ")")
+          });
+        }, i * 20);
+      });
+    }
+
+    function stopAnimateText() {
+      _toConsumableArray(text.querySelectorAll('div')).map(function (n) {
+        return n.style;
+      }).forEach(function (n, i) {
+        setTimeout(function () {
+          return Object.assign(n, !n.opacity || +n.opacity === 1 ? {
+            opacity: 1,
+            transform: "translate3d(0, 0, 0)",
+            color: "#000"
+          } : {
+            opacity: 1,
+            transform: "translate3d(0, 0, 0)",
+            color: "#4237f7"
+          });
+        }, i * 20);
+      });
+    }
+
+    box.addEventListener('mouseenter', animateText);
+    box.addEventListener('mouseout', stopAnimateText);
+  };
+
+  textAnimation();
+  ;
+  var isPhoneDevice = ("ontouchstart" in document.documentElement);
+
+  var fullPage = function fullPage() {
+    $('#fullpage').fullpage({
+      autoScrolling: true,
+      navigation: true,
+      scrollBar: true,
+      // scrollOverflow: true,
+      onLeave: function onLeave(origin, destination, direction) {
+        var section = destination.item;
+        var title = section.querySelector('.section__content');
+        var video = document.querySelectorAll('.section__video');
+        var tl = new TimelineMax({
+          delay: .5
+        });
+
+        if (destination.index === 1) {
+          tl.fromTo(video, .7, {
+            x: '-100%',
+            opacity: 0
+          }, {
+            x: '0%',
+            opacity: 1
+          });
+        } else {
+          tl.fromTo(video, .7, {
+            x: '100%',
+            opacity: 0
+          }, {
+            x: '0%',
+            opacity: 1
+          });
+        }
+
+        tl.fromTo(title, .5, {
+          y: '100',
+          opacity: 0
+        }, {
+          y: 0,
+          opacity: 1
+        });
+      }
+    });
+  };
+
+  if (!isPhoneDevice) {
+    fullPage();
+  }
+
+  ;
 })();

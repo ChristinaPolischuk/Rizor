@@ -71,6 +71,12 @@ section {
 	position: relative;
 }
 
+.js-animate-text div {
+	position: relative;
+	display: inline-block;
+	transition: all 1.5s;
+}
+
 .section {
 	overflow: hidden;
 	&__bg {
